@@ -1,0 +1,40 @@
+{
+ "updated": "2026-11-23T08:31+01:00",
+ "networks": {
+  "instagram": {
+   "status": "ok",
+   "followers": 6725,
+   "views": 2373698,
+   "comments": 4334,
+   "posts": 56
+  },
+  "facebook": {
+   "status": "ok",
+   "followers": 15,
+   "views": 14677,
+   "comments": 0,
+   "posts": 57
+  },
+  "youtube": {
+   "status": "ok",
+   "followers": 237,
+   "views": 185046,
+   "comments": 308,
+   "posts": 55
+  },
+  "tiktok": {
+   "status": "partial",
+   "followers": 2348,
+   "likes": 17400,
+   "posts": 53,
+   "views": null,
+   "comments": null
+  }
+ },
+ "total": {
+  "followers": 9325,
+  "views": 2573421,
+  "comments": 4642
+ },
+ "note": "TikTok: visualizaciones y comentarios pendientes (no públicos); el total los excluye."
+}
