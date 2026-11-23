@@ -14,7 +14,7 @@
 <header class="top"><img src="assets/logo.png" alt="Logo"><a class="brand" href="">Arquitectura de España</a>
 <nav><a class="hide" href="#redes"><span class="es">Redes</span><span class="en">Social</span></a><a class="hide" href="#galeria"><span class="es">Edificios</span><span class="en">Buildings</span></a><a class="hide" href="#rk">RK Casas Para Vivir</a><a href="contact/"><span class="es">Contacto</span><span class="en">Contact</span></a><button class="lg" type="button">ES | EN</button></nav></header>
 
-<div class="hero"><div class="strip"><img src="hero/h1.webp" alt="" fetchpriority=high><img src="hero/h2.webp" alt="" ><img src="hero/h3.webp" alt="" ><img src="hero/h4.webp" alt="" ><img src="hero/h5.webp" alt="" ><img src="hero/h6.webp" alt="" ></div><div class="in">
+<div class="hero"><div class="strip"><div class="vs" data-n="1"><video muted playsinline preload="none" poster="hero/s1c1.webp" data-k="1"></video></div><div class="vs" data-n="2"><video muted playsinline preload="none" poster="hero/s2c1.webp" data-k="2"></video></div><div class="vs" data-n="3"><video muted playsinline preload="none" poster="hero/s3c1.webp" data-k="3"></video></div><div class="vs" data-n="4"><video muted playsinline preload="none" poster="hero/s4c1.webp" data-k="4"></video></div><div class="vs" data-n="5"><video muted playsinline preload="none" poster="hero/s5c1.webp" data-k="5"></video></div><div class="vs" data-n="6"><video muted playsinline preload="none" poster="hero/s6c1.webp" data-k="6"></video></div></div><div class="in">
 <span class="kick"><span class="es">Un proyecto de RK Casas Para Vivir</span><span class="en">A project by RK Casas Para Vivir</span></span>
 <h1>Arquitectura<br>de España</h1>
 <p><span class="es">Vídeos aéreos de edificios residenciales de España <b>desde 1950</b>: quién los diseñó, cuándo se construyeron y en qué estilo.</span><span class="en">Aerial videos of residential buildings across Spain <b>from 1950 onwards</b>: who designed them, when they were built and in what style.</span></p>
@@ -51,12 +51,20 @@
 <span><span class="es"><b>App para creadores:</b> herramienta con la que conectamos una cuenta de TikTok para subir vídeos verticales.</span><span class="en"><b>Creator app:</b> a tool to connect a TikTok account and upload vertical videos.</span> <a href="app/"><span class="es">Más información</span><span class="en">More info</span></a> · <a href="privacy-policy/"><span class="es">Privacidad</span><span class="en">Privacy</span></a> · <a href="terms-of-service/"><span class="es">Condiciones</span><span class="en">Terms</span></a></span></div></div>
 <footer>© 2026 Arquitectura de España · <span class="es">un proyecto de</span><span class="en">a project by</span> <a href="https://casasparavivir.es/">RK Casas Para Vivir</a> · Córdoba · Antonio Luis García Navarro · <a href="mailto:superantoniogarcia@gmail.com">superantoniogarcia@gmail.com</a><br>
 <a href="privacy-policy/"><span class="es">Privacidad</span><span class="en">Privacy</span></a> · <a href="terms-of-service/"><span class="es">Condiciones</span><span class="en">Terms</span></a> · <a href="contact/"><span class="es">Contacto</span><span class="en">Contact</span></a> · <a href="app/"><span class="es">App para creadores</span><span class="en">Creator app</span></a></footer>
-<script>(function(){var l=localStorage.getItem('lang')||((navigator.language||'es').slice(0,2)=='es'?'es':'en');document.documentElement.lang=l;
-document.querySelectorAll('.lg').forEach(function(b){b.onclick=function(){l=document.documentElement.lang=='es'?'en':'es';document.documentElement.lang=l;localStorage.setItem('lang',l)}})})();</script>
-</body></html>
+<script>(function(){var l='es';document.documentElement.lang='es';
+document.querySelectorAll('.lg').forEach(function(b){b.onclick=function(){l=document.documentElement.lang=='es'?'en':'es';document.documentElement.lang=l}})})();</script>
 <script>
 fetch('stats.json?'+Date.now()).then(r=>r.json()).then(function(s){var f=new Intl.NumberFormat('es-ES');
 function g(p){var o=s;if(p.indexOf('total')<0)p='networks.'+p;p.split('.').forEach(function(k){o=o&&o[k]});return o}
 document.querySelectorAll('[data-s]').forEach(function(e){var v=g(e.dataset.s);e.textContent=(typeof v=='number')?f.format(v):'—'});
 var d=new Date(s.updated);document.getElementById('upd').textContent=isNaN(d)?s.updated:d.toLocaleString('es-ES',{dateStyle:'long',timeStyle:'short'})}).catch(function(){});
 </script>
+<script>
+(function(){var mq=matchMedia('(max-width:700px)');if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var t=document.createElement('video'),ext=t.canPlayType('video/webm; codecs="vp9"')?'webm':'mp4';
+function go(){document.querySelectorAll('.vs video').forEach(function(el){var k=+el.dataset.k;if(mq.matches&&k>3)return;var i=1;
+function play(){el.src='hero/s'+k+'c'+i+'.'+ext;el.play().catch(function(){})}
+el.addEventListener('ended',function(){i=i%3+1;play()});setTimeout(play,k*250)})}
+if(document.readyState=='complete')go();else addEventListener('load',go)})();
+</script>
+</body></html>
