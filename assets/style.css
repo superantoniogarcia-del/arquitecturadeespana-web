@@ -63,3 +63,5 @@ main.txt h1{font-size:1.9rem;margin:.2em 0}main.txt h2{font-size:1.2rem;color:va
 .lang{display:inline-block;font-size:.75rem;font-weight:700;color:#fff;background:var(--red);padding:2px 8px;border-radius:4px}
 .meta{color:var(--muted);font-size:.9rem}hr.sep{border:0;border-top:2px solid var(--yellow);margin:40px 0 26px}
 @media(max-width:700px){.top{padding:10px 14px;gap:8px;background:linear-gradient(#000c,#0000)}.top .brand{font-size:.9rem;line-height:1.1}.top nav{gap:10px}.top nav a{font-size:.85rem}.top img{width:34px;height:34px}.hero{min-height:520px;min-height:min(100vh,860px);min-height:min(100svh,860px)}.hero .in{padding:96px 16px 36px}.hero h1{font-size:2.5rem}.hero .strip{grid-template-columns:repeat(3,1fr)}.hero .vs:nth-child(n+4){display:none}.top nav a.hide{display:none}section{padding:44px 16px}.grid{grid-template-columns:repeat(2,1fr)}}
+
+.nets>*,.net,.net small,.net div,.net h3{min-width:0}.net a{overflow-wrap:anywhere;word-break:break-all}.net small{display:block;overflow-wrap:anywhere}
